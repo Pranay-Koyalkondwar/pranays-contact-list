@@ -83,5 +83,8 @@ This application is deployed on vercel and can be accessed via the following lin
 
 - **https://pranays-contact-list.vercel.app/**
 
+## AIs Used
+This application was developed with the help of **Claude sonnet 4.5**
+
 
 
