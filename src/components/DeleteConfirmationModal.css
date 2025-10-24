@@ -1,0 +1,136 @@
+.delete-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.delete-modal-container {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.delete-modal-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 1.5rem;
+  background-color: #fef2f2;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.delete-modal-icon svg {
+  width: 36px;
+  height: 36px;
+  color: #ef4444;
+}
+
+.delete-modal-container h2 {
+  margin: 0 0 1rem 0;
+  color: #1f2937;
+  font-size: 1.5rem;
+}
+
+.delete-modal-container p {
+  margin: 0 0 0.75rem 0;
+  color: #6b7280;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.delete-modal-container strong {
+  color: #1f2937;
+  font-weight: 600;
+}
+
+.warning-text {
+  font-size: 0.875rem !important;
+  color: #ef4444 !important;
+  font-weight: 500;
+}
+
+.delete-modal-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.delete-modal-actions .btn-cancel,
+.delete-modal-actions .btn-delete {
+  flex: 1;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.delete-modal-actions .btn-cancel {
+  background-color: #f3f4f6;
+  color: #374151;
+}
+
+.delete-modal-actions .btn-cancel:hover {
+  background-color: #e5e7eb;
+}
+
+.delete-modal-actions .btn-delete {
+  background-color: #ef4444;
+  color: white;
+}
+
+.delete-modal-actions .btn-delete:hover {
+  background-color: #dc2626;
+}
+
+[data-theme="dark"] .delete-modal-container {
+  background-color: #1e1e1e;
+}
+
+[data-theme="dark"] .delete-modal-icon {
+  background-color: #4c1d1d;
+}
+
+[data-theme="dark"] .delete-modal-container h2 {
+  color: #f9fafb;
+}
+
+[data-theme="dark"] .delete-modal-container p {
+  color: #9ca3af;
+}
+
+[data-theme="dark"] .delete-modal-container strong {
+  color: #f9fafb;
+}
+
+[data-theme="dark"] .delete-modal-actions .btn-cancel {
+  background-color: #374151;
+  color: #d1d5db;
+}
+
+[data-theme="dark"] .delete-modal-actions .btn-cancel:hover {
+  background-color: #4b5563;
+}
+
+@media (max-width: 640px) {
+  .delete-modal-actions {
+    flex-direction: column;
+  }
+}

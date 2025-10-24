@@ -1,0 +1,165 @@
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background-color: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  cursor: default;
+}
+
+.contact-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-color: #646cff;
+}
+
+.contact-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 3px solid #646cff;
+  flex-shrink: 0;
+}
+
+.contact-info {
+  flex: 1;
+  text-align: left;
+  min-width: 0;
+}
+
+.contact-name {
+  margin: 0 0 0.75rem 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.contact-detail {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+.contact-icon {
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+  color: #9ca3af;
+}
+
+.contact-detail span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.contact-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+.action-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.action-btn svg {
+  width: 18px;
+  height: 18px;
+}
+
+.edit-btn {
+  background-color: #eff6ff;
+  color: #3b82f6;
+}
+
+.edit-btn:hover {
+  background-color: #dbeafe;
+  transform: scale(1.1);
+}
+
+.delete-btn {
+  background-color: #fef2f2;
+  color: #ef4444;
+}
+
+.delete-btn:hover {
+  background-color: #fee2e2;
+  transform: scale(1.1);
+}
+
+[data-theme="dark"] .contact-card {
+  background-color: #1e1e1e;
+  border-color: #374151;
+}
+
+[data-theme="dark"] .contact-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .contact-name {
+  color: #f9fafb;
+}
+
+[data-theme="dark"] .contact-detail {
+  color: #d1d5db;
+}
+
+[data-theme="dark"] .edit-btn {
+  background-color: #1e3a5f;
+  color: #60a5fa;
+}
+
+[data-theme="dark"] .edit-btn:hover {
+  background-color: #1e40af;
+}
+
+[data-theme="dark"] .delete-btn {
+  background-color: #4c1d1d;
+  color: #f87171;
+}
+
+[data-theme="dark"] .delete-btn:hover {
+  background-color: #7f1d1d;
+}
+
+@media (max-width: 640px) {
+  .contact-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-info {
+    text-align: center;
+  }
+
+  .contact-details {
+    align-items: center;
+  }
+}

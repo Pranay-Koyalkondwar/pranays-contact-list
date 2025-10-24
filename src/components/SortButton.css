@@ -1,0 +1,202 @@
+.sort-button-container {
+  position: relative;
+  display: inline-block;
+}
+
+.sort-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  background: linear-gradient(135deg, #646cff 0%, #535bf2 100%);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(100, 108, 255, 0.3);
+}
+
+.sort-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(100, 108, 255, 0.4);
+  background: linear-gradient(135deg, #535bf2 0%, #646cff 100%);
+}
+
+.sort-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(100, 108, 255, 0.3);
+}
+
+.sort-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  flex-shrink: 0;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+}
+
+.chevron-icon {
+  width: 1.125rem;
+  height: 1.125rem;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+  opacity: 0.9;
+}
+
+.chevron-icon.open {
+  transform: rotate(180deg);
+}
+
+.sort-dropdown {
+  position: absolute;
+  top: calc(100% + 0.75rem);
+  left: 0;
+  min-width: 220px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(100, 108, 255, 0.15), 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  overflow: hidden;
+  animation: dropdownFadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes dropdownFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.sort-section {
+  padding: 0.5rem;
+}
+
+.sort-section-title {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: #ffffff;
+}
+
+.sort-option {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.625rem 0.75rem;
+  background: #ffffff;
+  border: none;
+  border-radius: 6px;
+  color: #213547;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  text-align: left;
+  position: relative;
+}
+
+.sort-option:hover {
+  background: #f3f4f6;
+}
+
+.sort-option.active {
+  background: #e0e7ff;
+  color: #646cff;
+  font-weight: 500;
+}
+
+.sort-option svg:first-child {
+  width: 1.125rem;
+  height: 1.125rem;
+  flex-shrink: 0;
+}
+
+.sort-option span {
+  flex: 1;
+}
+
+.check-icon {
+  width: 1.125rem;
+  height: 1.125rem;
+  flex-shrink: 0;
+  color: #646cff;
+}
+
+.sort-divider {
+  height: 1px;
+  background: #e5e7eb;
+  margin: 0.25rem 0;
+}
+
+/* Dark theme adjustments */
+[data-theme="dark"] .sort-button {
+  background: linear-gradient(135deg, #646cff 0%, #535bf2 100%);
+  box-shadow: 0 2px 8px rgba(100, 108, 255, 0.4);
+}
+
+[data-theme="dark"] .sort-button:hover {
+  box-shadow: 0 4px 16px rgba(100, 108, 255, 0.5);
+}
+
+[data-theme="dark"] .sort-dropdown {
+  background: #1e1e1e;
+  border-color: #374151;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4), 0 2px 8px rgba(100, 108, 255, 0.2);
+}
+
+[data-theme="dark"] .sort-section-title {
+  color: #9ca3af;
+  background: #1e1e1e;
+}
+
+[data-theme="dark"] .sort-option {
+  background: #1e1e1e;
+  color: rgba(255, 255, 255, 0.87);
+}
+
+[data-theme="dark"] .sort-option:hover {
+  background: #2a2a2a;
+}
+
+[data-theme="dark"] .sort-option.active {
+  background: #312e81;
+  color: #818cf8;
+}
+
+[data-theme="dark"] .sort-divider {
+  background: #374151;
+}
+
+/* Mobile responsive */
+@media (max-width: 640px) {
+  .sort-button {
+    padding: 0.5rem 0.875rem;
+    font-size: 0.8125rem;
+  }
+
+  .sort-button span {
+    display: none;
+  }
+
+  .sort-icon {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .sort-dropdown {
+    right: 0;
+    left: auto;
+    min-width: 180px;
+  }
+}
